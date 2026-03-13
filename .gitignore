@@ -1,0 +1,7 @@
+.env
+*.log
+*.aux
+*.out
+*.synctex.gz
+*.dvi
+unredacted.pdf
