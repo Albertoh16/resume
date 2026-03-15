@@ -1,0 +1,183 @@
+// ===========================
+// Resume of Alberto Sebastian Hernandez
+// ===========================
+
+// ── Page setup ──────────────────────────────────────────────────────────────
+#set page(
+  paper: "us-letter",
+  margin: (x: 0.5in, y: 0.2in),
+)
+#set text(size: 10pt)
+#set par(leading: 0.4em)
+
+// ── Contact info ─────────────────────────────────────────────────────────────
+#let my-email   = sys.inputs.at("EMAIL", default: "[REDACTED]")
+#let my-phone   = sys.inputs.at("PHONE_NUMBER", default: "[REDACTED]")
+#let my-linkedin = sys.inputs.at("LINKEDIN", default: "[REDACTED]")
+#let my-github = sys.inputs.at("GITHUB", default: "[REDACTED]")
+
+// ============================================================
+// UI FUNCTIONS
+// ============================================================
+
+/// Section header with small-caps label and a full-width rule below.
+#let section(title) = {
+  pad(top: -2pt)[
+    #{
+      text(size: 12pt, weight: "bold")[#smallcaps(title)]
+      v(-10pt)
+      line(length: 100%, stroke: 0.6pt)
+    }
+  ]
+}
+
+/// Two-line subheading: bold title + date on the first row,
+/// italic subtitle + location on the second row.
+///   #subheading("Company", "Date", "Role", "City, ST")
+#let subheading(org, date, role, loc) = {
+  pad(top: -6pt)[
+    #block(width: 100%)[
+      #text(weight: "bold", size: 10pt)[#org]
+      #h(1fr)
+      #text(size: 10pt)[#date]
+    ]
+  ]
+  
+  pad(top: -6pt, bottom: -4pt)[
+    #block(width: 100%)[
+      #text(style: "italic", size: 9pt)[#role]
+      #h(1fr)
+      #text(style: "italic", size: 9pt)[#loc]
+    ]
+  ]
+
+}
+
+/// Project heading: bold name | tag | tag  ···  date
+///   #project-heading("FIUJudge", ("Contest Environment", "Hybrid"), "June 2025 – Present")
+#let project-heading(name, tags, date) = {
+  pad(top: -6pt, bottom: -4pt)[
+    #grid(
+      columns: (1fr, auto),
+      {
+        text(weight: "bold")[#name]
+        for t in tags { text[ $|$ #t] }
+      },
+      text[#date],
+    )
+  ]
+  // v(-2pt)
+}
+
+/// Bulleted list of resume items with consistent small size & spacing.
+#let items(..bullets) = {
+  // set text(size: 8.5pt)
+  set list(indent: 1em, body-indent: 0.4em, spacing: 4pt)
+  pad(top: -2pt)[#list(..bullets.pos().map(b => b))]
+  v(-1pt)
+}
+
+// ============================================================
+// HEADER
+// ============================================================
+#import "@preview/fontawesome:0.5.0": *
+#align(center)[
+  #text(size: 18pt, weight: "bold")[#smallcaps[Alberto Sebastian Hernandez]] \
+  #text(size: 9pt)[
+    #fa-icon("phone") #my-phone #h(6pt) | #h(6pt)
+    #fa-icon("envelope") #my-email #h(6pt) | #h(6pt)
+    #fa-icon("linkedin") #link(my-linkedin)[#my-linkedin] #h(6pt) | #h(6pt)
+    #fa-icon("github") #link(my-github)[#my-github]
+  ]
+]
+
+// ============================================================
+// EDUCATION
+// ============================================================
+
+#section("Education")
+
+#subheading(
+  "Florida International University",
+  "Aug. 2023 – Dec. 2026",
+  "Bachelor's in Computer Science",
+  "Miami, FL",
+)
+#items(
+  [*Relevant coursework*: Data Structures, Algorithm Techniques, Systems Programming, Software Engineering],
+)
+
+// ============================================================
+// TECHNICAL SKILLS
+// ============================================================
+
+#section("Technical Skills")
+
+#pad(top:-4pt)[
+  #text[- *Languages*: JavaScript, C/C++, C\#, Python3, Typescript, SQL, SQLite
+- *Libraries/Frameworks*: Node.js, React, React Native, Tailwind, .Net, Pandas, FastAPI, PyTorch, Transformers, Huggingface, Tailwind, Nativewind, Unity
+- *Tools*: Git, Azure DevOps, Postman, DigitalOcean ]
+]
+
+// ============================================================
+// EXPERIENCE
+// ============================================================
+
+#section("Experience")
+
+#subheading("FEAM Aero", "Sep. 2025 – Present", "Software Engineering Intern", "Miami Lakes, FL")
+#items(
+  [Collaborated within a team of *5* engineers to deliver *15–20* tickets across *full-stack* features and bug fixes for a legacy (*C\#*, *React*, *TypeScript*) and modern (*React*, *Tailwind*, *Python*) codebase serving *1,500+* mechanics, managed via *Azure DevOps*.],
+  [Modernized and refactored legacy software features, improving application performance by *10–20%* and enhancing long-term maintainability across a large-scale management platform.],
+  [Built and maintained *REST API* integrations using *Microsoft SQL Server* to fetch and manage operational data including mechanic work hours, fuel usage, and aircraft service records.],
+)
+
+#subheading("UKG", "Sep. 2024 – Dec. 2024", "Software Engineering Intern", "Weston, FL")
+#items(
+  [Contributed to a *Microsoft Dynamics 365* financial webapp serving *80,000+* clients by resolving backend tickets via *Azure DevOps*, utilizing *C\#*, *Microsoft SQL Server*, and internal *REST APIs* to fix bugs, improve automation, and enhance overall performance.],
+  [Independently designed and developed a *full-stack* internal email automation tool using *X++*, enabling team members to assign automated actions to emails and receive real-time pass/fail notifications, reducing manual workload for the team.],
+  [Improved overall engineering team efficiency by *10%* through backend optimizations and delivering tooling that streamlined repetitive financial workflows within *Microsoft Dynamics 365*.],
+)
+
+#subheading("Mercedes-Benz", "Aug. 2023 – Sep. 2024", "Systems/Network Analyst", "Coral Gables, FL")
+#items(
+  [Resolved *25+* tickets per week for *250+* clients alongside a sole IT Administrator, maintaining and configuring *switches*, *firewalls*, and *servers* to ensure network uptime and reliability.],
+  [Automated network-wide policy enforcement via *Microsoft PowerShell* scripting, reducing manual IT workload and streamlining compliance across all endpoints.],
+  [Managed user accounts in *Microsoft Active Directory* and provided *Azure* cloud support, enabling seamless onboarding and remote access for dealership staff and off-site customers.],
+)
+
+// ============================================================
+// LEADERSHIP
+// ============================================================
+
+#section("Leadership")
+
+#subheading(
+  "Reach Project Manager", "January 2026 - Present",
+  "INIT FIU", "Miami, FL"
+)
+#items(
+  [Orchestrated continuous workshop programming for FIU students by coordinating scheduling, content formatting, and logistics to deliver behavioral and technical interview prep sessions as well as Data Structures & Algorithms curriculum.],
+  [Led and managed a team of *5* leads to ensure seamless execution of workshops and learning materials, creating accountability and teamwork across all team members.],
+  [Streamlined organizational processes by moderating team workflows and standardizing workshop materials, improving consistency and quality of educational content delivered to students.]
+)
+
+// ============================================================
+// PROJECTS
+// ============================================================
+
+#section("Projects")
+
+#project-heading("PrepBear", ("AI Mock Interview Website", "Shellhacks"), "Sep. 2025 – Oct.2025")
+#items(
+  [Integrated *Google Live API* *WebSocket*-based audio streaming in *TypeScript* to enable real-time, voice interactions between users and an AI mock interviewer.],
+  [Designed and implemented the AI mock interviewer interface using *React* and *TypeScript*, delivering an intuitive user experience for conducting live interview sessions.],
+  [Leveraged the *Gemini 1.5 API* to dynamically simulate tailored interviews based on user-provided job title, company, and resume inputs, deployed and used by real users.]
+)
+
+#project-heading("StudyDen", ("AI Education Mobile App", "Remote"), "Feb. 2025 – Oct. 2025")
+#items(
+  [Developed *REST API* endpoints using *FastAPI* and *Python* to handle quiz generation workflows, integrating the *OpenAI API* to auto-generate personalized quizzes from learning materials provided by the user.],
+  [Deployed and configured an *Ubuntu* server to host the project database, ensuring a stable and accessible backend for the full development team.],
+  [Built frontend features in *React Native* for scanning and storing user books, creating a seamless in-app content management experience.],
+)
