@@ -99,7 +99,7 @@
 
 #subheading(
   "Florida International University",
-  "Aug. 2023 – Dec. 2026",
+  "Aug. 2023 - Dec. 2026",
   "Bachelor's in Computer Science",
   "Miami, FL",
 )
@@ -108,41 +108,29 @@
 )
 
 // ============================================================
-// TECHNICAL SKILLS
-// ============================================================
-
-#section("Technical Skills")
-
-#pad(top:-4pt)[
-  #text[- *Languages*: JavaScript, C/C++, C\#, Python3, Typescript, SQL, SQLite
-- *Libraries/Frameworks*: Node.js, React, React Native, Tailwind, .Net, Pandas, FastAPI, PyTorch, Transformers, Huggingface, Tailwind, Nativewind, Unity
-- *Tools*: Git, Azure DevOps, Postman, DigitalOcean ]
-]
-
-// ============================================================
 // EXPERIENCE
 // ============================================================
 
 #section("Experience")
 
-#subheading("FEAM Aero", "Sep. 2025 – Present", "Software Engineering Intern", "Miami Lakes, FL")
+#subheading("FEAM Aero", "Sep. 2025 - Present", "Software Engineering Intern", "Miami Lakes, FL")
 #items(
-  [Collaborated with a team of *5 engineers* to deliver *15–20 tickets* across *full-stack* features and bug fixes for a legacy (*C\#*, *React*, *TypeScript*) and modern (*React*, *Tailwind*, *Python*) codebase serving *1,500+ clients*, managed via *Azure DevOps*.],
-  [Modernized and refactored legacy software features, improving application performance by *10–20%* and enhancing long-term maintainability across a large-scale management platform.],
+  [Delivered *15-20 tickets* across *full-stack* features and bug fixes on a platform serving *1,500+ clients*, working across a legacy (*C\#*, *React*, *TypeScript*) and modern (*React*, *Tailwind*, *Node.js*, *Python*) codebase managed via *Azure DevOps*.],
+  [Modernized and refactored legacy software features, improving application performance by *10-20%* and enhancing long-term maintainability across a large-scale management platform.],
   [Built and maintained *REST API* integrations using *Microsoft SQL Server* to fetch and manage operational data including mechanic work hours, fuel usage, and aircraft service records.],
 )
 
-#subheading("UKG", "Sep. 2024 – Dec. 2024", "Software Engineering Intern", "Weston, FL")
+#subheading("UKG", "Sep. 2024 - Dec. 2024", "Software Engineering Intern", "Weston, FL")
 #items(
   [Contributed to a *Microsoft Dynamics 365* webapp serving *80,000+ clients* by resolving backend tickets via *Azure DevOps*, using *C\#*, *Microsoft SQL Server*, and internal *REST APIs* to fix bugs, improve automation, and enhance performance.],
   [Independently designed and developed a *full-stack* internal email automation tool using *X++*, enabling team members to assign automated actions to emails and receive real-time pass/fail notifications, reducing manual workload for the team.],
   [Improved overall engineering team efficiency *10%* through backend optimizations and delivering tooling that streamlined repetitive financial workflows within *Microsoft Dynamics 365*.],
 )
 
-#subheading("Mercedes-Benz", "Aug. 2023 – Sep. 2024", "Systems/Network Analyst", "Coral Gables, FL")
+#subheading("Mercedes-Benz", "Aug. 2023 - Sep. 2024", "Systems/Network Analyst", "Coral Gables, FL")
 #items(
-  [Resolved *25+ tickets* per week for *250+ clients* alongside a sole IT Administrator, maintaining and configuring *switches*, *firewalls*, and *servers* to ensure network uptime and reliability.],
-  [Automated network-wide policy enforcement via *Microsoft PowerShell* scripting, reducing manual IT workload and streamlining compliance across all endpoints.],
+  [Automated network-wide policy enforcement via *Microsoft PowerShell* scripting, reducing manual IT workload by approximately *30%* and streamlining compliance across *250+ endpoints*.],
+  [Configured and maintained *switches*, *firewalls*, and *servers* for *250+ clients*, resolving *25+ tickets* per week alongside a sole IT Administrator to sustain network uptime.],
   [Managed user accounts in *Microsoft Active Directory* and provided *Azure* cloud support, enabling seamless onboarding and remote access for dealership staff and off-site customers.],
 )
 
@@ -153,12 +141,12 @@
 #section("Leadership")
 
 #subheading(
-  "Reach Project Manager", "January 2026 - Present",
+  "Reach Project Manager", "Jan. 2026 - Present",
   "INIT FIU", "Miami, FL"
 )
 #items(
-  [Led a team of *5 leads* to plan and deliver weekly technical workshops for *10–15 FIU students*, covering Data Structures & Algorithms curriculum and behavioral and technical interview preparation.],
-  [Designed and standardized workshop curriculum and materials in *Python and Java*, ensuring consistent and high-quality educational content across all sessions.],
+  [Led a team of *5 leads* to plan and deliver weekly technical workshops for *10-15 FIU students*, covering Data Structures & Algorithms curriculum and behavioral and technical interview preparation.],
+  [Designed and standardized *Python and Java* DSA workshop curriculum across *10+ sessions*, contributing to measurably increased student attendance and positive feedback scores.],
   [Collaborated within a *20+ member executive board* to drive strategic decisions on club direction, contributing to the overall growth and vision of INIT FIU.]
 )
 
@@ -168,21 +156,34 @@
 
 #section("Projects")
 
-#project-heading("Dr. Home D.O", ("Online Multiplayer Video Game", "Hybrid"), "Jan. 2026 – Present")
+#project-heading("Dr. Home D.O", ("Online Multiplayer Video Game", "Team of 3"), "Jan. 2026 - Present")
 #items(
-  [Contributing to a *full-stack* multiplayer top-down strategy and puzzle game in *C\# and Unity* with a team of *3 engineers*, leveraging adjacency graphs and node trees to drive dynamic gameplay and map logic.],
+  [Contributing to a *full-stack* multiplayer top-down strategy and puzzle game in *C\#* and *Unity* with a team of *3 engineers*, leveraging adjacency graphs and node trees to drive dynamic gameplay and map logic.],
   [Integrated *Mirror networking* library to architect a stable peer-to-peer connection infrastructure, optimizing network synchronization and performance across all multiplayer clients.],
 )
-#project-heading("PrepBear", ("AI Mock Interview Website", "Shellhacks"), "Sep. 2025 – Oct.2025")
+
+#project-heading("PrepBear", ("AI Mock Interview Website", "Team of 4", "ShellHacks 2025"), "Sep. 2025")
 #items(
-  [Integrated *Google Live API* *WebSocket*-based audio streaming in *TypeScript* to enable real-time, voice interactions between users and an AI mock interviewer.],
+  [Integrated *Google Live API* *WebSocket*-based audio streaming in *TypeScript* and *Node.js* to enable real-time, voice interactions between users and an AI mock interviewer.],
   [Designed and implemented the AI mock interviewer interface using *React* and *TypeScript*, delivering an intuitive user experience for conducting live interview sessions.],
   [Leveraged the *Gemini 1.5 API* to dynamically simulate tailored interviews based on user-provided job title, company, and resume inputs, deployed and used by real users.]
 )
 
-#project-heading("StudyDen", ("AI Education Mobile App", "Remote"), "Feb. 2025 – Oct. 2025")
+#project-heading("StudyDen", ("AI Education Mobile App", "Team of 4"), "Feb. 2025 - Oct. 2025")
 #items(
-  [Developed *REST API* endpoints using *FastAPI* and *Python* to handle quiz generation workflows, integrating the *OpenAI API* to auto-generate personalized quizzes from learning materials provided by the user.],
+  [Developed *REST API* endpoints using *FastAPI*, *Node.js*, and *Python* to handle quiz generation workflows, integrating the *OpenAI API* to auto-generate personalized quizzes from learning materials provided by the user.],
   [Deployed and configured an *Ubuntu* server to host the project database, ensuring a stable backend for the full dev team.],
   [Built frontend features in *React Native* to scan/store textbooks, creating a seamless in-app content management experience.],
 )
+
+// ============================================================
+// TECHNICAL SKILLS
+// ============================================================
+
+#section("Technical Skills")
+
+#pad(top:-4pt)[
+  #text[- *Languages*: JavaScript, TypeScript, C/C++, C\#, Python3, SQL
+- *Libraries/Frameworks*: Node.js, React, React Native, Tailwind, ASP.NET, FastAPI, Pandas, PyTorch, Hugging Face, Transformers, Unity
+- *Tools*: Git, Azure DevOps, Postman, DigitalOcean ]
+]
